@@ -24,3 +24,20 @@ Note also:
 It appears that the number of webhooks and slash commands doesn't matter for
 your 5 free integrations -- they count as 1, no matter how many you've
 configured.
+
+## Deployment
+
+* Setup your GAE account and create an application.  Remember the application's
+name.
+
+* Change app.yml to have the name of your application in it.
+* Download the GAE Go SDK and install per their instructions.
+* Once you can run goapp, run `goapp deploy`
+
+In Slack:
+
+* Slack -> Integrations -> All Services -> Outgoing Webhooks
+* Click "Add Outgoing WebHooks Integrations".
+* Trigger words should be "hello slack"
+* URL should be the base URL for your GAE application.  Mine is
+`https://strudelline-helloslack.appspot.com/`.
